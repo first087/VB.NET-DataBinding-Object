@@ -22,6 +22,7 @@ Partial Class FrmDataBinding
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.BtnAgePlus1 = New System.Windows.Forms.Button()
         Me.RdoGenderFemale = New System.Windows.Forms.RadioButton()
@@ -32,9 +33,11 @@ Partial Class FrmDataBinding
         Me.Label1 = New System.Windows.Forms.Label()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.LblName = New System.Windows.Forms.Label()
+        Me.EmployeeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BtnSave = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -146,11 +149,16 @@ Partial Class FrmDataBinding
         '
         Me.LblName.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.LblName.AutoSize = True
+        Me.LblName.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeeBindingSource, "Name", True))
         Me.LblName.Location = New System.Drawing.Point(80, 28)
         Me.LblName.Name = "LblName"
         Me.LblName.Size = New System.Drawing.Size(57, 16)
         Me.LblName.TabIndex = 0
         Me.LblName.Text = "LblName"
+        '
+        'EmployeeBindingSource
+        '
+        Me.EmployeeBindingSource.DataSource = GetType(DataBindingObject.Employee)
         '
         'BtnSave
         '
@@ -175,6 +183,7 @@ Partial Class FrmDataBinding
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -189,5 +198,6 @@ Partial Class FrmDataBinding
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents NumericUpDown1 As System.Windows.Forms.NumericUpDown
     Friend WithEvents BtnAgePlus1 As System.Windows.Forms.Button
+    Friend WithEvents EmployeeBindingSource As System.Windows.Forms.BindingSource
 
 End Class
