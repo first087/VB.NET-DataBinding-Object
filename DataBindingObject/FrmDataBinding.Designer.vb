@@ -32,8 +32,8 @@ Partial Class FrmDataBinding
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.NumAge = New System.Windows.Forms.NumericUpDown()
-        Me.LblName = New System.Windows.Forms.Label()
         Me.EmployeeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.LblName = New System.Windows.Forms.Label()
         Me.BtnSave = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumAge, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -146,6 +146,10 @@ Partial Class FrmDataBinding
         Me.NumAge.Size = New System.Drawing.Size(72, 23)
         Me.NumAge.TabIndex = 0
         '
+        'EmployeeBindingSource
+        '
+        Me.EmployeeBindingSource.DataSource = GetType(DataBindingObject.Employee)
+        '
         'LblName
         '
         Me.LblName.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -156,10 +160,6 @@ Partial Class FrmDataBinding
         Me.LblName.Size = New System.Drawing.Size(57, 16)
         Me.LblName.TabIndex = 0
         Me.LblName.Text = "LblName"
-        '
-        'EmployeeBindingSource
-        '
-        Me.EmployeeBindingSource.DataSource = GetType(DataBindingObject.Employee)
         '
         'BtnSave
         '
