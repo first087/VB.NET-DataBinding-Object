@@ -23,16 +23,16 @@ Partial Class FrmDataBinding
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.BtnSave = New System.Windows.Forms.Button()
-        Me.LblName = New System.Windows.Forms.Label()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.RdoGenderUnknown = New System.Windows.Forms.RadioButton()
-        Me.RdoGenderMale = New System.Windows.Forms.RadioButton()
-        Me.RdoGenderFemale = New System.Windows.Forms.RadioButton()
         Me.BtnAgePlus1 = New System.Windows.Forms.Button()
+        Me.RdoGenderFemale = New System.Windows.Forms.RadioButton()
+        Me.RdoGenderMale = New System.Windows.Forms.RadioButton()
+        Me.RdoGenderUnknown = New System.Windows.Forms.RadioButton()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.LblName = New System.Windows.Forms.Label()
+        Me.BtnSave = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -58,54 +58,50 @@ Partial Class FrmDataBinding
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Employee"
         '
-        'BtnSave
+        'BtnAgePlus1
         '
-        Me.BtnSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.BtnSave.Location = New System.Drawing.Point(135, 166)
-        Me.BtnSave.Name = "BtnSave"
-        Me.BtnSave.Size = New System.Drawing.Size(75, 23)
-        Me.BtnSave.TabIndex = 1
-        Me.BtnSave.Text = "Save"
-        Me.BtnSave.UseVisualStyleBackColor = True
+        Me.BtnAgePlus1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.BtnAgePlus1.Location = New System.Drawing.Point(161, 53)
+        Me.BtnAgePlus1.Name = "BtnAgePlus1"
+        Me.BtnAgePlus1.Size = New System.Drawing.Size(37, 23)
+        Me.BtnAgePlus1.TabIndex = 1
+        Me.BtnAgePlus1.Text = "+1"
+        Me.BtnAgePlus1.UseVisualStyleBackColor = True
         '
-        'LblName
+        'RdoGenderFemale
         '
-        Me.LblName.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.LblName.AutoSize = True
-        Me.LblName.Location = New System.Drawing.Point(80, 28)
-        Me.LblName.Name = "LblName"
-        Me.LblName.Size = New System.Drawing.Size(57, 16)
-        Me.LblName.TabIndex = 0
-        Me.LblName.Text = "LblName"
+        Me.RdoGenderFemale.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.RdoGenderFemale.AutoSize = True
+        Me.RdoGenderFemale.Location = New System.Drawing.Point(226, 82)
+        Me.RdoGenderFemale.Name = "RdoGenderFemale"
+        Me.RdoGenderFemale.Size = New System.Drawing.Size(68, 20)
+        Me.RdoGenderFemale.TabIndex = 4
+        Me.RdoGenderFemale.Text = "Female"
+        Me.RdoGenderFemale.UseVisualStyleBackColor = True
         '
-        'NumericUpDown1
+        'RdoGenderMale
         '
-        Me.NumericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.NumericUpDown1.Location = New System.Drawing.Point(83, 54)
-        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {150, 0, 0, 0})
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(72, 23)
-        Me.NumericUpDown1.TabIndex = 1
+        Me.RdoGenderMale.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.RdoGenderMale.AutoSize = True
+        Me.RdoGenderMale.Location = New System.Drawing.Point(167, 82)
+        Me.RdoGenderMale.Name = "RdoGenderMale"
+        Me.RdoGenderMale.Size = New System.Drawing.Size(53, 20)
+        Me.RdoGenderMale.TabIndex = 3
+        Me.RdoGenderMale.Text = "Male"
+        Me.RdoGenderMale.UseVisualStyleBackColor = True
         '
-        'Label1
+        'RdoGenderUnknown
         '
-        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(28, 28)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(41, 16)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Name"
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(28, 56)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(30, 16)
-        Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Age"
+        Me.RdoGenderUnknown.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.RdoGenderUnknown.AutoSize = True
+        Me.RdoGenderUnknown.Checked = True
+        Me.RdoGenderUnknown.Location = New System.Drawing.Point(83, 82)
+        Me.RdoGenderUnknown.Name = "RdoGenderUnknown"
+        Me.RdoGenderUnknown.Size = New System.Drawing.Size(78, 20)
+        Me.RdoGenderUnknown.TabIndex = 2
+        Me.RdoGenderUnknown.TabStop = True
+        Me.RdoGenderUnknown.Text = "Unknown"
+        Me.RdoGenderUnknown.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -117,50 +113,54 @@ Partial Class FrmDataBinding
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Gender"
         '
-        'RdoGenderUnknown
+        'Label2
         '
-        Me.RdoGenderUnknown.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.RdoGenderUnknown.AutoSize = True
-        Me.RdoGenderUnknown.Checked = True
-        Me.RdoGenderUnknown.Location = New System.Drawing.Point(83, 82)
-        Me.RdoGenderUnknown.Name = "RdoGenderUnknown"
-        Me.RdoGenderUnknown.Size = New System.Drawing.Size(78, 20)
-        Me.RdoGenderUnknown.TabIndex = 5
-        Me.RdoGenderUnknown.TabStop = True
-        Me.RdoGenderUnknown.Text = "Unknown"
-        Me.RdoGenderUnknown.UseVisualStyleBackColor = True
+        Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(28, 56)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(30, 16)
+        Me.Label2.TabIndex = 3
+        Me.Label2.Text = "Age"
         '
-        'RdoGenderMale
+        'Label1
         '
-        Me.RdoGenderMale.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.RdoGenderMale.AutoSize = True
-        Me.RdoGenderMale.Location = New System.Drawing.Point(167, 82)
-        Me.RdoGenderMale.Name = "RdoGenderMale"
-        Me.RdoGenderMale.Size = New System.Drawing.Size(53, 20)
-        Me.RdoGenderMale.TabIndex = 6
-        Me.RdoGenderMale.Text = "Male"
-        Me.RdoGenderMale.UseVisualStyleBackColor = True
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(28, 28)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(41, 16)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Name"
         '
-        'RdoGenderFemale
+        'NumericUpDown1
         '
-        Me.RdoGenderFemale.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.RdoGenderFemale.AutoSize = True
-        Me.RdoGenderFemale.Location = New System.Drawing.Point(226, 82)
-        Me.RdoGenderFemale.Name = "RdoGenderFemale"
-        Me.RdoGenderFemale.Size = New System.Drawing.Size(68, 20)
-        Me.RdoGenderFemale.TabIndex = 7
-        Me.RdoGenderFemale.Text = "Female"
-        Me.RdoGenderFemale.UseVisualStyleBackColor = True
+        Me.NumericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.NumericUpDown1.Location = New System.Drawing.Point(83, 54)
+        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {150, 0, 0, 0})
+        Me.NumericUpDown1.Name = "NumericUpDown1"
+        Me.NumericUpDown1.Size = New System.Drawing.Size(72, 23)
+        Me.NumericUpDown1.TabIndex = 0
         '
-        'BtnAgePlus1
+        'LblName
         '
-        Me.BtnAgePlus1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.BtnAgePlus1.Location = New System.Drawing.Point(161, 53)
-        Me.BtnAgePlus1.Name = "BtnAgePlus1"
-        Me.BtnAgePlus1.Size = New System.Drawing.Size(37, 23)
-        Me.BtnAgePlus1.TabIndex = 8
-        Me.BtnAgePlus1.Text = "+1"
-        Me.BtnAgePlus1.UseVisualStyleBackColor = True
+        Me.LblName.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.LblName.AutoSize = True
+        Me.LblName.Location = New System.Drawing.Point(80, 28)
+        Me.LblName.Name = "LblName"
+        Me.LblName.Size = New System.Drawing.Size(57, 16)
+        Me.LblName.TabIndex = 0
+        Me.LblName.Text = "LblName"
+        '
+        'BtnSave
+        '
+        Me.BtnSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.BtnSave.Location = New System.Drawing.Point(135, 166)
+        Me.BtnSave.Name = "BtnSave"
+        Me.BtnSave.Size = New System.Drawing.Size(75, 23)
+        Me.BtnSave.TabIndex = 1
+        Me.BtnSave.Text = "Save"
+        Me.BtnSave.UseVisualStyleBackColor = True
         '
         'FrmDataBinding
         '
