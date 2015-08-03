@@ -32,9 +32,9 @@ Partial Class FrmDataBinding
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.NumAge = New System.Windows.Forms.NumericUpDown()
-        Me.EmployeeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LblName = New System.Windows.Forms.Label()
         Me.BtnSave = New System.Windows.Forms.Button()
+        Me.EmployeeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GroupBox1.SuspendLayout()
         CType(Me.NumAge, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,6 +75,7 @@ Partial Class FrmDataBinding
         '
         Me.RdoGenderFemale.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.RdoGenderFemale.AutoSize = True
+        Me.RdoGenderFemale.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.EmployeeBindingSource, "GenderIsFemale", True))
         Me.RdoGenderFemale.Location = New System.Drawing.Point(226, 82)
         Me.RdoGenderFemale.Name = "RdoGenderFemale"
         Me.RdoGenderFemale.Size = New System.Drawing.Size(68, 20)
@@ -86,6 +87,7 @@ Partial Class FrmDataBinding
         '
         Me.RdoGenderMale.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.RdoGenderMale.AutoSize = True
+        Me.RdoGenderMale.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.EmployeeBindingSource, "GenderIsMale", True))
         Me.RdoGenderMale.Location = New System.Drawing.Point(167, 82)
         Me.RdoGenderMale.Name = "RdoGenderMale"
         Me.RdoGenderMale.Size = New System.Drawing.Size(53, 20)
@@ -98,6 +100,7 @@ Partial Class FrmDataBinding
         Me.RdoGenderUnknown.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.RdoGenderUnknown.AutoSize = True
         Me.RdoGenderUnknown.Checked = True
+        Me.RdoGenderUnknown.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.EmployeeBindingSource, "GenderIsUnknown", True))
         Me.RdoGenderUnknown.Location = New System.Drawing.Point(83, 82)
         Me.RdoGenderUnknown.Name = "RdoGenderUnknown"
         Me.RdoGenderUnknown.Size = New System.Drawing.Size(78, 20)
@@ -146,10 +149,6 @@ Partial Class FrmDataBinding
         Me.NumAge.Size = New System.Drawing.Size(72, 23)
         Me.NumAge.TabIndex = 0
         '
-        'EmployeeBindingSource
-        '
-        Me.EmployeeBindingSource.DataSource = GetType(DataBindingObject.Employee)
-        '
         'LblName
         '
         Me.LblName.Anchor = System.Windows.Forms.AnchorStyles.Top
@@ -170,6 +169,10 @@ Partial Class FrmDataBinding
         Me.BtnSave.TabIndex = 1
         Me.BtnSave.Text = "Save"
         Me.BtnSave.UseVisualStyleBackColor = True
+        '
+        'EmployeeBindingSource
+        '
+        Me.EmployeeBindingSource.DataSource = GetType(DataBindingObject.Employee)
         '
         'FrmDataBinding
         '

@@ -42,4 +42,31 @@
             _gender = value
         End Set
     End Property
+
+    Public Property GenderIsUnknown() As Boolean
+        Get
+            Return _gender = GenderEnum.Unknown
+        End Get
+        Set(value As Boolean)
+            If value Then _gender = GenderEnum.Unknown
+        End Set
+    End Property
+
+    Public Property GenderIsMale() As Boolean
+        Get
+            Return _gender = GenderEnum.Male
+        End Get
+        Set(value As Boolean)
+            If value Then _gender = GenderEnum.Male
+        End Set
+    End Property
+
+    Public Property GenderIsFemale() As Boolean
+        Get
+            Return _gender = GenderEnum.Female
+        End Get
+        Set(value As Boolean)
+            If value Then _gender = GenderEnum.Female
+        End Set
+    End Property
 End Class
