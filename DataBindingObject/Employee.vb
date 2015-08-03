@@ -4,7 +4,6 @@
 Public Class Employee
     Implements INotifyPropertyChanged
 
-
     Private _name As String
     Private _age As Byte
     Private _gender As GenderEnum

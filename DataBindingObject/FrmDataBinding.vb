@@ -1,9 +1,8 @@
 ﻿Public Class FrmDataBinding
 
-    Dim emp As Employee
+    Private emp As Employee
 
     Public Sub New()
-
         ' This call is required by the designer.
         InitializeComponent()
 
@@ -15,29 +14,13 @@
         EmployeeBindingSource.DataSource = emp
     End Sub
 
-    Private Sub NumAge_ValueChanged(sender As Object, e As EventArgs) Handles NumAge.ValueChanged
-
-    End Sub
-
     Private Sub BtnAgePlus1_Click(sender As Object, e As EventArgs) Handles BtnAgePlus1.Click
         emp.Age += 1
     End Sub
 
-    Private Sub RdoGenderUnknown_CheckedChanged(sender As Object, e As EventArgs) Handles RdoGenderUnknown.CheckedChanged
-
-    End Sub
-
-    Private Sub RdoGenderMale_CheckedChanged(sender As Object, e As EventArgs) Handles RdoGenderMale.CheckedChanged
-
-    End Sub
-
-    Private Sub RdoGenderFemale_CheckedChanged(sender As Object, e As EventArgs) Handles RdoGenderFemale.CheckedChanged
-
-    End Sub
-
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
-        Dim strEmp As String = String.Format("Name={0}, Age={1}, Gender={2}", _
-                                             emp.Name, emp.Age, emp.Gender)
-        MessageBox.Show(strEmp, "emp")
+        Dim strEmp As String = String.Format("Name={0}{3}Age={1}{3}Gender={2}", _
+                                             emp.Name, emp.Age, emp.Gender, vbCrLf)
+        MessageBox.Show(strEmp, "Employee")
     End Sub
 End Class
