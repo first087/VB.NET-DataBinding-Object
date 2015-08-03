@@ -8,7 +8,7 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        emp = New Employee("Ethan Hunt M", 18, Employee.GenderEnum.Male)
+        emp = New Employee("Ethan Hunt M", 18, Employee.GenderEnum.Unknown)
     End Sub
 
     Private Sub FrmDataBinding_Load(sender As Object, e As EventArgs) Handles MyBase.Load

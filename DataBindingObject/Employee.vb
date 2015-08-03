@@ -1,4 +1,9 @@
-﻿Public Class Employee
+﻿Imports System.ComponentModel
+
+
+Public Class Employee
+    Implements INotifyPropertyChanged
+
 
     Private _name As String
     Private _age As Byte
@@ -22,6 +27,7 @@
         End Get
         Set(ByVal value As String)
             _name = value
+            RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs("Name"))
         End Set
     End Property
 
@@ -31,6 +37,7 @@
         End Get
         Set(ByVal value As Byte)
             _age = value
+            RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs("Age"))
         End Set
     End Property
 
@@ -40,6 +47,7 @@
         End Get
         Set(ByVal value As GenderEnum)
             _gender = value
+            RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs("Gender"))
         End Set
     End Property
 
@@ -48,7 +56,10 @@
             Return _gender = GenderEnum.Unknown
         End Get
         Set(value As Boolean)
-            If value Then _gender = GenderEnum.Unknown
+            If value Then
+                _gender = GenderEnum.Unknown
+                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs("Gender"))
+            End If
         End Set
     End Property
 
@@ -57,7 +68,10 @@
             Return _gender = GenderEnum.Male
         End Get
         Set(value As Boolean)
-            If value Then _gender = GenderEnum.Male
+            If value Then
+                _gender = GenderEnum.Male
+                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs("Gender"))
+            End If
         End Set
     End Property
 
@@ -66,7 +80,12 @@
             Return _gender = GenderEnum.Female
         End Get
         Set(value As Boolean)
-            If value Then _gender = GenderEnum.Female
+            If value Then
+                _gender = GenderEnum.Female
+                RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs("Gender"))
+            End If
         End Set
     End Property
+
+    Public Event PropertyChanged(sender As Object, e As PropertyChangedEventArgs) Implements INotifyPropertyChanged.PropertyChanged
 End Class
