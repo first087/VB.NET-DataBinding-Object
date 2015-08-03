@@ -71,6 +71,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Employee.vb" />
     <Compile Include="FrmDataBinding.vb">
       <SubType>Form</SubType>
     </Compile>
