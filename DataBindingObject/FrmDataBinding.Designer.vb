@@ -31,12 +31,12 @@ Partial Class FrmDataBinding
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
+        Me.NumAge = New System.Windows.Forms.NumericUpDown()
         Me.LblName = New System.Windows.Forms.Label()
         Me.EmployeeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BtnSave = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NumAge, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -52,7 +52,7 @@ Partial Class FrmDataBinding
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.NumericUpDown1)
+        Me.GroupBox1.Controls.Add(Me.NumAge)
         Me.GroupBox1.Controls.Add(Me.LblName)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
@@ -136,14 +136,15 @@ Partial Class FrmDataBinding
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Name"
         '
-        'NumericUpDown1
+        'NumAge
         '
-        Me.NumericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.Top
-        Me.NumericUpDown1.Location = New System.Drawing.Point(83, 54)
-        Me.NumericUpDown1.Maximum = New Decimal(New Integer() {150, 0, 0, 0})
-        Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(72, 23)
-        Me.NumericUpDown1.TabIndex = 0
+        Me.NumAge.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.NumAge.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.EmployeeBindingSource, "Age", True))
+        Me.NumAge.Location = New System.Drawing.Point(83, 54)
+        Me.NumAge.Maximum = New Decimal(New Integer() {150, 0, 0, 0})
+        Me.NumAge.Name = "NumAge"
+        Me.NumAge.Size = New System.Drawing.Size(72, 23)
+        Me.NumAge.TabIndex = 0
         '
         'LblName
         '
@@ -182,7 +183,7 @@ Partial Class FrmDataBinding
         Me.Text = "DataBinding with Object"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NumAge, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmployeeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -196,7 +197,7 @@ Partial Class FrmDataBinding
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents NumericUpDown1 As System.Windows.Forms.NumericUpDown
+    Friend WithEvents NumAge As System.Windows.Forms.NumericUpDown
     Friend WithEvents BtnAgePlus1 As System.Windows.Forms.Button
     Friend WithEvents EmployeeBindingSource As System.Windows.Forms.BindingSource
 
